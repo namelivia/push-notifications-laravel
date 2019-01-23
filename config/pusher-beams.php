@@ -31,8 +31,8 @@ return [
     'connections' => [
 
         'main' => [
-            'instance_id' => env('PUSHER_BEAMS_INSTANCE_ID'),
-            'secret_key' => env('PUSHER_BEAMS_SECRET_KEY'),
+            'instance_id' => env('PUSHER_BEAMS_INSTANCE_ID', 'your-instance-id'),
+            'secret_key' => env('PUSHER_BEAMS_SECRET_KEY', 'your-secret-key'),
         ],
 
         'alternative' => [
