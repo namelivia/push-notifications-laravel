@@ -1,0 +1,55 @@
+{
+    "name": "namelivia/push-notifications-laravel",
+    "description": "A Pusher Beams bridge for Laravel",
+    "license": "MIT",
+    "keywords": ["laravel", "pusher", "beams", "api", "push-notifications-php", "rest", "realtime", "trigger", "publish", "events"],
+    "authors": [
+        {
+            "name": "José Ignacio Amelivia Santiago",
+            "email": "jignacio.amelivia@gmail.com",
+            "homepage": "https://namelivia.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/contracts": "5.5.*|5.6.*|5.7.*",
+        "illuminate/support": "5.5.*|5.6.*|5.7.*",
+        "graham-campbell/manager": "^3.0|^4.0",
+        "pusher/pusher-push-notifications": "^1.0"
+    },
+    "require-dev": {
+        "graham-campbell/analyzer": "^1.1",
+        "graham-campbell/testbench": "^4.0|^5.0",
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "3.5.*|3.6.*|3.7.*",
+        "phpunit/phpunit": "^6.5|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pusher\\Beams\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pusher\\Beams\\Tests\\Laravel\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Pusher\\Beams\\Laravel\\PusherBeamsServiceProvider"
+            ],
+            "aliases": {
+                "Pusher": "Pusher\\Beams\\Laravel\\Facades\\PusherBeams"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
