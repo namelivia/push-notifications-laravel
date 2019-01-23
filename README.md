@@ -1,5 +1,7 @@
 # Laravel Pusher Beams Notifications
 
+[![Build Status](https://travis-ci.com/namelivia/push-notifications-laravel.svg?branch=master)](https://travis-ci.com/namelivia/push-notifications-laravel)
+
 > A [Pusher Beams](https://github.com/pusher/push-notifications-php) bridge for Laravel. Heavily based on `pusher/pusher-http-php`.
 
 ```php
