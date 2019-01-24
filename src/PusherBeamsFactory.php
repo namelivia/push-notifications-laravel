@@ -49,7 +49,7 @@ class PusherBeamsFactory
                 throw new InvalidArgumentException("Missing configuration key [$key].");
             }
         }
-        
+ 
         return array_only($config, $keys);
     }
 
@@ -65,6 +65,6 @@ class PusherBeamsFactory
         return new PushNotifications([
             'instanceId' => $auth['instance_id'],
             'secretKey' => $auth['secret_key'],
-		]);
+        ]);
     }
 }

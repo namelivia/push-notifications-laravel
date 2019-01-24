@@ -23,4 +23,3 @@ class PusherBeams extends Facade
         return 'pusher-beams';
     }
 }
-
