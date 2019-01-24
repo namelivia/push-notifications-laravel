@@ -49,7 +49,7 @@ class PusherBeamsFactory
                 throw new InvalidArgumentException("Missing configuration key [$key].");
             }
         }
-	
+
         return array_only($config, $keys);
     }
 
