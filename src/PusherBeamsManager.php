@@ -69,4 +69,3 @@ class PusherBeamsManager extends AbstractManager
         return $this->factory;
     }
 }
-
