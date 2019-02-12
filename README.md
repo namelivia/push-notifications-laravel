@@ -5,26 +5,54 @@
 
 > A [Pusher Beams](https://github.com/pusher/push-notifications-php) bridge for Laravel. Heavily based on `pusher/pusher-http-php`.
 
+### Publishing to Device Interests
+
+You can broadcast notifications to groups of subscribed devices using [Device Interests](https://docs.pusher.com/beams/concepts/device-interests):
 ```php
-// Sends broadcast notifications to groups of subscribed devices using Interests
-PusherBeams::publish(
-	["hello", "donuts"],
-	[
-		"fcm" => [
-			"notification" => [
-				"title" => "Hi!",
-				"body" => "This is my first Push Notification!"
-				]
-		],
-		"apns" => ["aps" => [
-				"alert" => [
-					"title" => "Hi!",
-					"body" => "This is my first Push Notification!"
-				]
-		]]
-	]
+$publishResponse = PusherBeams::publishToInterests(
+  "body" => "Hello, world!",
+  ["donuts"],
+  [
+    "apns" => [
+      "aps" => [
+	    "alert" => "Hello!",
+      ],
+    ],
+    "fcm" => [
+      "notification" => [
+        "title" => "Hello!",
+        "body" => "Hello, world!",
+      ],
+    ],
+  ]
 );
 
+echo("Published with Publish ID: " . $publishResponse->publishId . "\n");
+```
+
+### Publishing to Authenticated Users
+
+Securely send notifications to individual users of your application using [Authenticated Users](https://docs.pusher.com/beams/concepts/authenticated-users):
+
+```php
+$publishResponse = PuhserBeams::publishToUsers(
+  ["user-0001"],
+  [
+    "apns" => [
+      "aps" => [
+        "alert" => "Hello!",
+      ],
+    ],
+    "fcm" => [
+      "notification" => [
+        "title" => "Hello!",
+        "body" => "Hello, world!",
+      ],
+    ],
+  ]
+);
+
+echo("Published with Publish ID: " . $publishResponse->publishId . "\n");
 ```
 
 ## Installation
