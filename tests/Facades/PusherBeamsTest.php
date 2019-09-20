@@ -12,9 +12,9 @@ use Pusher\Beams\Tests\Laravel\AbstractTestCase;
 /**
  * This is the Pusher Beams test class.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author José Ignacio Amelivia Santiago <jignacio.amelivia@gmail.com>
  */
-class PusherTest extends AbstractTestCase
+class PusherBeamsTest extends AbstractTestCase
 {
     use FacadeTrait;
 
