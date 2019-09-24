@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Pusher\Beams\Laravel;
 
+use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use Pusher\PushNotifications\PushNotifications;
 
@@ -50,7 +51,7 @@ class PusherBeamsFactory
             }
         }
 
-        return array_only($config, $keys);
+        return Arr::only($config, $keys);
     }
 
     /**
